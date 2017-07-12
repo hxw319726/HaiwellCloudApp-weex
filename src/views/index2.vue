@@ -67,7 +67,12 @@
                 ]
             }
         },
-        components: {},
+        components: {
+            'bui-header': require('../components/bui-header.vue'),
+            'bui-content': require('../components/bui-content.vue'),
+            'bui-icon': require('../components/bui-icon.vue'),
+            'bui-image': require('../components/bui-image.vue')
+        },
         methods: {
             jumpTo: function (file) {
                 if (file) {

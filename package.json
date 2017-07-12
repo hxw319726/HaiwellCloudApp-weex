@@ -7,7 +7,7 @@
     "build": "webpack",
     "build_plugin": "webpack --config ./tools/webpack.config.plugin.js --color",
     "dev": "weex-builder src dist -w",
-    "serve": "webpack-dev-server --config webpack.dev.js -p --open"
+    "serve": "node build/init.js && serve -p 8181"
   },
   "keywords": [
     "weex"
@@ -34,6 +34,7 @@
     "node-sass": "^4.5.3",
     "quick-local-ip": "^1.0.7",
     "sass-loader": "^6.0.6",
+    "serve": "^6.0.2",
     "vue-loader": "^10.0.2",
     "vue-template-compiler": "^2.1.8",
     "webpack": "^2.2.1",

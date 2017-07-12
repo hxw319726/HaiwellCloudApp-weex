@@ -17,7 +17,7 @@ function getEntryFileContent(entryPath, vueFilePath) {
     contents = 'require(\'' + plugindir + '\') \n';
   }
   if (isWin) {
-    relativePath = relativePath.replace(/\\/g,'\\\\');
+    relativePath = relativePath.replace(/\\/g,'/');
   }
   contents += 'var App = require(\'' + relativePath + '\')\n';
   contents += 'var mixins = require('+'\'../src/js/mixins.js\''+')\n';
@@ -76,8 +76,6 @@ const plugins = [
     {from: './src/font', to: "./font"}
   ])
 ];
-
-
 
 const webConfig = {
   context: pathTo.join(__dirname, ''),
